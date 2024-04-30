@@ -29,15 +29,15 @@
 }
 .content1 {
       position: absolute; /* 设置绝对定位 */
-      top: 75rem; /* 距离父元素顶部的距离 */
-      right: 5rem; /* 距离父元素左侧的距离 */
+      top: 68rem; /* 距离父元素顶部的距离 */
+      right: 3rem; /* 距离父元素左侧的距离 */
       width: 35rem; /* 设置宽度 */
     }
 
     .img1 {
         position: absolute; /* 设置绝对定位 */
-        top: 70rem; /* 距离父元素顶部的距离 */
-        left: 6rem; /* 距离父元素左侧的距离 */
+        top: 63rem; /* 距离父元素顶部的距离 */
+        left: 1rem; /* 距离父元素左侧的距离 */
         width: 60%; /* 设置宽度 */
         width: 50rem;
         height: 40rem;
@@ -87,7 +87,7 @@
   var speed = distance / 250; // 设置滚动速度
 
   function scrollStep() {
-    if (window.scrollY < 940) {
+    if (window.scrollY < Math.max(document.body.clientHeight, document.documentElement.clientHeight)) {
       window.scrollTo(0, window.scrollY + speed);
       setTimeout(scrollStep, timeInterval);
     }else{

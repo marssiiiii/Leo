@@ -22,7 +22,7 @@
         }
         #startButton {
     display: block;
-    margin: 10rem auto 0; 
+    margin: 5rem auto 0;
     font-size: 24px;
     padding: 20px 40px;
     border: 2px solid white;
@@ -88,7 +88,7 @@
   var speed = distance / 250; // 设置滚动速度
 
   function scrollStep() {
-    if (window.scrollY < 940) {
+    if (window.scrollY < Math.max(document.body.clientHeight, document.documentElement.clientHeight)) {
       window.scrollTo(0, window.scrollY + speed);
       setTimeout(scrollStep, timeInterval);
     }else{
