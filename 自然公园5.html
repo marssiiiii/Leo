@@ -29,16 +29,12 @@
 }
 .content1 {
       position: absolute; /* 设置绝对定位 */
-      top: 68rem; /* 距离父元素顶部的距离 */
       right: 3rem; /* 距离父元素左侧的距离 */
       width: 35rem; /* 设置宽度 */
     }
 
     .img1 {
-        position: absolute; /* 设置绝对定位 */
-        top: 63rem; /* 距离父元素顶部的距离 */
-        left: 1rem; /* 距离父元素左侧的距离 */
-        width: 60%; /* 设置宽度 */
+        position: relative; /* 设置绝对定位 */
         width: 50rem;
         height: 40rem;
     }
@@ -79,6 +75,8 @@
     <img class="img1" src="images/青海湖1.png">
 </div>
 <script>
+  var viewportHeight = window.innerHeight;
+document.querySelector(".content1").style.top = (50+viewportHeight) + "px";
     function scrollToBottom() {
   var scrollHeight = document.body.scrollHeight;
   var currentScroll = window.scrollY;

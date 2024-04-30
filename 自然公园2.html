@@ -77,6 +77,8 @@
     <img class="img1" src="images/鄱阳湖3.png">
 </div>
 <script>
+  var viewportHeight = window.innerHeight;
+document.querySelector(".content1").style.top = (50+viewportHeight) + "px";
     function scrollToBottom() {
   var scrollHeight = document.body.scrollHeight;
   var currentScroll = window.scrollY;

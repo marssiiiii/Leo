@@ -33,9 +33,8 @@
       width: 35rem; /* 设置宽度 */
     }
 
-    
     .img1 {
-        position: relative; 
+        position: relative; /* 设置绝对定位 */
         width: 50rem;
         height: 40rem;
     }
@@ -48,7 +47,6 @@
         opacity: 1;
       }
     }
-
     /* 应用渐变和动画到文字 */
     .fadeInText {
       animation: fadeIn 2s ease-in-out; /* 使用2秒的动画时间 */
@@ -75,7 +73,7 @@
     <img class="img1" src="images/野鸭湖1.png">
 </div>
 <script>
-    var viewportHeight = window.innerHeight;
+  var viewportHeight = window.innerHeight;
 document.querySelector(".content1").style.top = (50+viewportHeight) + "px";
     function scrollToBottom() {
   var scrollHeight = document.body.scrollHeight;
